@@ -17,6 +17,23 @@ class Form extends React.Component {
       lastName: event.target.value
     })
   }
+  
+  
+  
+  handleSubmit = event => {
+    event.preventDefault()
+    const firstName = event.target.children[0].value 
+    const lastName = event.target.children[1].value 
+    this.sendFormDataSomewhere({ firstName, lastName })
+  }
+  
+  listOfSubmissions = () => {
+    return this.state.submittedData.map(data => {
+      
+    })
+    return this.state.submitted
+  }
+  
 
   render() {
     return (
